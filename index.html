@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main container for the currency converter -->
+    <div class="container">
+        <!-- Heading of the application -->
+        <h1>Currency Converter</h1>
+
+        <!-- Input group for entering the amount to convert -->
+        <div class="input-group">
+            <label for="amount" class="input-label">Amount</label>
+            <!-- Input field for the amount -->
+            <input type="number" id="amount" placeholder="Enter amount" min="0" step="any">
+        </div>
+
+        <!-- Input group for selecting the source currency -->
+        <div class="input-group">
+            <label for="fromCurrency" class="input-label">From Currency</label>
+            <!-- Select element for the source currency -->
+            <select id="fromCurrency"></select>
+        </div>
+
+        <!-- Button to swap the currencies -->
+        <button class="swap-btn" id="swapBtn" title="Swap currencies">⇄</button>
+
+        <!-- Input group for selecting the target currency -->
+        <div class="input-group">
+            <label for="toCurrency" class="input-label">To Currency</label>
+            <!-- Select element for the target currency -->
+            <select id="toCurrency"></select>
+        </div>
+
+        <!-- Display the conversion result -->
+        <div class="result-container">
+            <div class="loader" id="loader"></div>
+            <div class="result" id="result">Enter an amount to convert</div>
+        </div>
+    </div>
+    <!-- Link to the main JavaScript file -->
+    <script src="main.js"></script>
+</body>
+
+</html>

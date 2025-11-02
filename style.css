@@ -1,0 +1,174 @@
+/* General body styles */
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    margin: 0;
+    background: url('698604.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* Container for the currency converter */
+.container {
+    background: linear-gradient(30deg, #f5f7fa 30%, #757575 100%);
+    border-radius: 60px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+    border: 20px solid #676767;
+    transition: all 0.3s ease;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    border-radius: 1px;
+}
+
+/* Input group styles */
+.input-group {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+/* Input and select styles */
+input,
+select {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #f9f9f9;
+}
+
+/* Input focus styles */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.1);
+    background-color: #fff;
+}
+
+/* Label for inputs */
+.input-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Swap button styles */
+.swap-btn {
+    display: block;
+    margin: 0.5rem auto;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Swap button hover styles */
+.swap-btn:hover {
+    background: #2980b9;
+}
+
+.swap-btn:active {
+    opacity: 0.9;
+}
+
+
+
+/* Result container styles */
+.result-container {
+    position: relative;
+    margin-top: 1rem;
+}
+
+/* Result display styles */
+.result {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Loading spinner */
+.loader {
+    display: none;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input,
+    select {
+        padding: 0.8rem 1rem;
+    }
+
+    .result {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}
